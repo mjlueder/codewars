@@ -44,3 +44,15 @@ function SeriesSum(n) {
 }
 
 console.log(SeriesSum(0));
+
+
+// Clock shows h hours, m minutes and s seconds after midnight.
+
+// Your task is to write a function which returns the time since midnight in milliseconds.
+
+function past(h, m, s){
+  if (h < 0 || h > 23 || m < 0 || m > 59 || s < 0 || s > 59) return
+  return (h*60*60*1000 + m*60*1000 + s*1000)
+}
+
+// Alt:  return ((h*3600)+(m*60)+s)*1000;
