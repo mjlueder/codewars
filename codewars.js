@@ -4,7 +4,7 @@ function solution(str, ending) {
   return (str.substring(str.length - ending.length) === ending)
 }
 
-console.log(solution('abcdebc', 'bc'));
+// console.log(solution('abcdebc', 'bc'));
 
 
 //capitalize each word. Your task is to convert strings to how they would be written by Jaden Smith. 
@@ -17,7 +17,9 @@ String.prototype.toJadenCase = function () {
   return sent.join(' ')
 };
 
-console.log(str.toJadenCase())
+// console.log(str.toJadenCase())
+
+
 
 
 // Your task is to write a function which returns the sum of following series upto nth term(parameter).
@@ -43,7 +45,8 @@ function SeriesSum(n) {
   return sum.toString()
 }
 
-console.log(SeriesSum(0));
+// console.log(SeriesSum(0));
+
 
 
 // Clock shows h hours, m minutes and s seconds after midnight.
@@ -106,5 +109,7 @@ function squareSum(numbers){
 
 
 function descendingOrder(n){
-  //...
+  return parseInt(n.toString().split('').sort().reverse().join(''))
 }
+
+console.log(descendingOrder(42145))
