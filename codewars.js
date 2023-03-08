@@ -112,7 +112,7 @@ function descendingOrder(n){
   return parseInt(n.toString().split('').sort().reverse().join(''))
 }
 
-console.log(descendingOrder(42145))
+// console.log(descendingOrder(42145))
 
 
 
@@ -131,5 +131,15 @@ console.log(descendingOrder(42145))
 // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
 function openOrSenior(data){
-  // ...
+  const categorized = data.map(pair => {
+    if (pair[0] >= 55 && pair[1] > 7) {
+      return "Senior"
+    } else {
+      return "Open"
+    }
+  })
+  return categorized
 }
+
+console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
+
