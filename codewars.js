@@ -131,13 +131,9 @@ function descendingOrder(n){
 // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
 function openOrSenior(data){
-  const categorized = data.map(pair => {
-    if (pair[0] >= 55 && pair[1] > 7) {
-      return "Senior"
-    } else {
-      return "Open"
-    }
-  })
+  const categorized = data.map(pair => (
+    (pair[0] >= 55 && pair[1] > 7) ? "Senior" : "Open"
+  ))
   return categorized
 }
 
