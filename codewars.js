@@ -148,9 +148,7 @@ function openOrSenior(data){
 // Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
 
 function getAge(inputString){
-  // let arr = inputString.split(' ')
-  // return parseInt(arr[0])
-  return parseInt(inputString.split(' ')[0])
+  return parseInt(inputString)
 }
 
 console.log(getAge("1 year old"))
