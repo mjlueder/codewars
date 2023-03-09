@@ -137,7 +137,7 @@ function openOrSenior(data){
   return categorized
 }
 
-console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
+// console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
 
 
 
@@ -148,5 +148,9 @@ console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9
 // Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
 
 function getAge(inputString){
-  
+  // let arr = inputString.split(' ')
+  // return parseInt(arr[0])
+  return parseInt(inputString.split(' ')[0])
 }
+
+console.log(getAge("1 year old"))
