@@ -184,3 +184,18 @@ function getGrade (s1, s2, s3) {
 // console.log(getGrade(95,90,93));
 // console.log(getGrade(84,79,85));
 // console.log(getGrade(60,82,76));
+
+
+
+// We need a function that can transform a number (integer) into a string.
+
+// What ways of achieving this do you know?
+
+// Examples (input --> output):
+// 123  --> "123"
+// 999  --> "999"
+// -100 --> "-100"
+
+function numberToString(num) {
+  // Return a string of the number here!
+}
