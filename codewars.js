@@ -197,5 +197,7 @@ function getGrade (s1, s2, s3) {
 // -100 --> "-100"
 
 function numberToString(num) {
-  // Return a string of the number here!
+  return num.toString()
 }
+
+
