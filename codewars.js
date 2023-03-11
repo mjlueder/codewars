@@ -209,7 +209,7 @@ function numberToString(num) {
 // 0 => [0]
 
 function digitize(n) {
-  return n.toString().split('').reverse().map(letter => (parseInt(letter)))
+  return n.toString().split('').reverse().map(Number)
 }
 
 console.log(digitize(1234));
