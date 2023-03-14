@@ -282,10 +282,30 @@ function findNextSquare(sq) {
 // "double  spaces"      ==> "elbuod  secaps"
 
 function reverseWords(string) {
-  let arr1 = string.split('')
-  console.log(arr1)
-  arr1 = arr1.reverse()
-  console.log(arr1)
+  let arr = string.split('')
+  let finalArr = []
+  let word = []
+  arr.forEach(letter => {
+    if (letter === ' ' && word.length) {
+      finalArr.push(word)
+      finalArr.push(letter)
+      word = []
+    } else if (letter === ' ' && word.length === 0) {
+      finalArr.push(letter)
+    } else {
+      word.unshift(letter)
+    }
+  })
+  finalArr.push(word)
+  finalArr = finalArr.map(val => {
+    if (val === ' ') {
+      return val
+    } else {
+      return val.join('')
+    }
+  })
+  finalArr = finalArr.join('')
+  return finalArr
 }
 
-reverseWords("double  spaces")
+console.log(reverseWords("The quick brown fox jumps over the lazy dog."))
