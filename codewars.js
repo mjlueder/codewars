@@ -269,4 +269,23 @@ function findNextSquare(sq) {
   return Number.isInteger(x) ? ((x + 1) * (x + 1)) : -1
 }
 
-console.log(findNextSquare(114))
+// console.log(findNextSquare(114))
+
+
+
+// Reverse words
+
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+function reverseWords(string) {
+  let arr1 = string.split('')
+  console.log(arr1)
+  arr1 = arr1.reverse()
+  console.log(arr1)
+}
+
+reverseWords("double  spaces")
