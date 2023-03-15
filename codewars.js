@@ -329,14 +329,7 @@ function alsoReverseWords (str) {
 // 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
 
 function addBinary(a,b) {
-  let num = a + b
-  let binaryNum = ''
-  while (num > 0) {
-    let remainder = num % 2
-    binaryNum = remainder + binaryNum
-    num = Math.floor(num / 2)
-  }
-  return binaryNum
+  return (a+b).toString(2)
 }
 
 console.log(addBinary(50, 50));
