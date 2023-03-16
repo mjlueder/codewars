@@ -361,6 +361,15 @@ function removeExclamationMarks(s) {
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
 
 function stray(numbers) {
-  return 0;
+  if (numbers[0] === numbers[1]) {
+    return numbers.filter(c => (c !== numbers[0]))[0]
+  } else if (numbers[0] === numbers[2]) {
+    return numbers[1]
+  } else {
+    return numbers[0]
+  }
 }
 
+const strayAlt = nums => nums.reduce((a, b) => a ^ b);
+
+console.log(stray([2, 1, 2]))
