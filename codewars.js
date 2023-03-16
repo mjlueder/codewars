@@ -332,4 +332,12 @@ function addBinary(a,b) {
   return (a+b).toString(2)
 }
 
-console.log(addBinary(50, 50));
+// console.log(addBinary(50, 50));
+
+
+
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMarks(s) {
+  return '';
+}
