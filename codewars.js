@@ -390,5 +390,7 @@ console.log(stray([2, 1, 2]))
 // Note: keep the original order of the names in the output.
 
 function friend(friends){
-  //your code here
+  return friends.filter(friend => (friend.length ===4))
 }
+
+console.log(friend(["Ryan", "Kieran", "Jason", "Yous"]));
