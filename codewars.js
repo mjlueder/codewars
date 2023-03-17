@@ -393,7 +393,7 @@ function friend(friends){
   return friends.filter(friend => (friend.length ===4))
 }
 
-console.log(friend(["Ryan", "Kieran", "Jason", "Yous"]));
+// console.log(friend(["Ryan", "Kieran", "Jason", "Yous"]));
 
 
 
@@ -409,5 +409,11 @@ console.log(friend(["Ryan", "Kieran", "Jason", "Yous"]));
 // "a234"   -->  false
 
 function validatePIN (pin) {
-  //return true or false
+  return (/^\d{4}$/.test(pin) || /^\d{6}$/.test(pin))
 }
+
+console.log(validatePIN("1234"));
+console.log(validatePIN("12345"));
+console.log(validatePIN("a234"));
+console.log(validatePIN("123456"));
+console.log(validatePIN("1234e6"));
