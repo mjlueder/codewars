@@ -372,7 +372,7 @@ function stray(numbers) {
 
 const strayAlt = nums => nums.reduce((a, b) => a ^ b);
 
-console.log(stray([2, 1, 2]))
+// console.log(stray([2, 1, 2]))
 
 
 
@@ -409,7 +409,7 @@ function friend(friends){
 // "a234"   -->  false
 
 function validatePIN (pin) {
-  return (/^\d{4}$/.test(pin) || /^\d{6}$/.test(pin))
+  return (/^\d{4}$|^\d{6}$/.test(pin))
 }
 
 console.log(validatePIN("1234"));
