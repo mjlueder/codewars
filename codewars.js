@@ -428,7 +428,6 @@ function validatePIN (pin) {
 // Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
 
 function cockroachSpeed(s) {
-  if (typeof s === 'string') s = parseInt(s) 
   return Math.floor(s * 1000 / 36)
 }
 
