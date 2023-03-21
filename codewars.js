@@ -478,3 +478,20 @@ var uniqueInOrder=function(iterable){
 // findNb(1071225) --> 45
 
 // findNb(91716553919377) --> -1
+
+function findNb(m) {
+  if (m < 1) return -1
+  if (Math.floor(m) !== m) return -1
+  let sum = 0
+  for (let i = 1; i <= m; i++){
+    sum += i*i*i
+    if (sum === m) return i
+    if (sum > m) return -1
+  }
+}
+
+// console.log(findNb(0))
+// console.log(findNb(1.8))
+// console.log(findNb(1071225));
+// console.log(findNb(-2))
+// console.log(findNb(1071228));
