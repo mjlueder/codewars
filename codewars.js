@@ -534,8 +534,20 @@ function nbYear(p0, percent, aug, p) {
 // "identifier"   =>  "identifier"
 // ""             =>  ""
 
-function camelCase (str) {
-  
+function camelCase (string) {
+  for (let i = 0; i < string.length; i++){
+    console.log(string[i]);
+    if (string[i] === string[i].toUpperCase()) {
+      let start = string.slice(0, i)
+      let end = string.slice(i, string.length)
+      console.log('Start ', start, ' End ', end);
+      string = start + ' ' + end
+      console.log('string ', string);
+      i++
+      string.length++
+    }
+  }
+  return string
 }
 
-console.log(camelCase("camelCasing"))
+console.log(camelCase("lifeAbleAbleHave"))
