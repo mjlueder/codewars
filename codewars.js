@@ -522,3 +522,20 @@ function nbYear(p0, percent, aug, p) {
 }
 
 // console.log(nbYear(1500000, 2.5, 10000, 2000000));
+
+
+
+// Camel case
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+function camelCase (str) {
+  
+}
+
+console.log(camelCase("camelCasing"))
