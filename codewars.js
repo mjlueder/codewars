@@ -572,6 +572,21 @@ function camelCase (string) {
 // Note:
 // The ball can only be seen if the height of the rebounding ball is strictly greater than the window parameter.
 
+
+// check conditions
+// initiate a counting variable
+// set up a while loop to calculate passes
+
 function bouncingBall(h,  bounce,  window) {
-  // your code here
+  if (h <= 0 || bounce <= 0 || bounce >= 1 || window >= h || window <= 0) return -1
+  let passes = 1 
+  while (h > window) {
+    h = h * bounce
+    if (h > window ) {
+      passes += 2
+    }
+  }
+  return passes
 }
+
+// console.log(bouncingBall(100, .5, 10))
