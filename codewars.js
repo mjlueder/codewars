@@ -606,6 +606,28 @@ function bouncingBall(h,  bounce,  window) {
 // "aA11" -> 2 # 'a' and '1'
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
+// make lower case
+// loop? for each? filter?
+// while text.length > 0, forEach,
+
+
 function duplicateCount(text){
-  //...
+  text = text.toLowerCase().split('')
+  // console.log('start ', text);
+  let count = 0
+  text.forEach((char, idx) => {
+    // console.log('char ', char);
+    let start = text.length
+    // console.log('start ', start);
+    text = text.filter((c) => (
+      c !== char
+    ))
+    let end = text.length
+    // console.log('end ', end);
+    if ( (start - end) > 1 ) count++
+    // console.log('fitlered ', text);
+  })
+  return count
 }
+
+// console.log(duplicateCount(""));
