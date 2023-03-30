@@ -648,10 +648,17 @@ function duplicateCount(text){
 // Output string must be two numbers separated by a single space, and highest number is first.
 
 function highAndLow(numbers){
-  numbers = numbers.split(' ').map(letter => (parseInt(letter))).sort(function(a, b){return a - b});
-  min = numbers[0]
-  max = numbers[numbers.length - 1]
-  return max + ' ' + min
+  // numbers = numbers.split(' ').map(letter => (parseInt(letter))).sort(function(a, b){return a - b});
+  // min = numbers[0]
+  // max = numbers[numbers.length - 1]
+  // return max + ' ' + min
+
+
+  
+  // Alternative
+  numbers = numbers.split(' ')
+  return `${Math.max(...numbers)} ${Math.min(...numbers)}`
 }
 
-highAndLow("1 9 3 4 -5")
+// console.log(highAndLow("1 9 3 4 -5"));
+
