@@ -693,6 +693,47 @@ function highAndLow(numbers){
  * @param {number[]} nums
  * @return {number}
  */
+
+// don't necessarily want every other house
+// compare answers: 
+//  -- even homes
+//  -- odd homes
+//  -- max then work down homes
+//  -- ...?
+
+// can't rob adjacent houses
+// sort max to min? start with max, work down the list?
+// take max
+// next number: check if adjacent
+
 var rob = function(nums) {
-  
+  if (nums.length === 0) return 0;
+  if (nums.length === 1) return nums[0]
+
+  // let evenSum = 0
+  // for (let i = 1; i < nums.length; i = i + 2) {
+  //   evenSum += nums[i]
+  //   // console.log(evenSum);
+  // }
+
+  // let oddSum = 0
+  // for (let i = 0; i < nums.length; i = i + 2) {
+  //   oddSum += nums[i]
+  //   // console.log(oddSum);
+  // }
+
+  // console.log(nums.sort(function(a, b){return b - a}))
+
+  let count = [nums[0], Math.max(nums[0], nums[1])]
+
+  for (let i = 2; i < nums.length; i++) {
+    count[i] = Math.max(count[i-2] + nums[i], count[i-1])
+    console.log(count[i])
+  }
+  return count[nums.length - 1]
 };
+
+console.log(rob([1, 9, 2, 7, 1, 1, 8, 1]));
+console.log(rob([1, 7, 9, 8, 1]));
+console.log(rob([4, 7, 9, 8, 4]));
+
