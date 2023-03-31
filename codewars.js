@@ -752,24 +752,13 @@ var rob = function(nums) {
 // twoSum([1, 2, 3], 4) // returns [0, 2] or [2, 0]
 
 function twoSum(numbers, target) {
-  let answer = []
   for (let x = 0; x < numbers.length; x++) {
     for (let y = 0; y < numbers.length; y++) {
       if ( x !== y ) {
-        if (numbers[x] + numbers[y] === target) {
-          console.log(x);
-          console.log(y);
-          console.log(numbers[x]);
-          console.log(numbers[y]);
-          answer.push(x)
-          answer.push(y)
-          console.log(answer);
-          // return
-        }
+        if (numbers[x] + numbers[y] === target) return [x, y]
       }
     }
   }
-  return answer.slice(0, 2)
 }
 
 console.log(twoSum([1, 2, 3], 4));
