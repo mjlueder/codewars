@@ -796,5 +796,18 @@ function twoSum(numbers, target) {
 // The two arrays have the same size (> 0) given as parameter in function comp.
 
 function comp(array1, array2){
-  //your code here
+  if ( !array1 || !array2 ) return false
+  array1 = array1.map(num => (num*num))
+  array1 = array1.sort((a, b) => {return a - b})\
+  array2 = array2.sort((a, b) => {return a - b})
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i] ) {
+      return false
+    }
+  }
+  return true
 }
+
+// console.log(comp([121, 144, 19, 161, 19, 144, 19, 11], [121, 14641, 20736, 361, 25921, 361, 20736, 361]))
+// console.log(comp([121, 144, 19, 161, 19, 144, 19, 11], [132, 14641, 20736, 361, 25921, 361, 20736, 361]));
+// console.log(comp(null, null));
