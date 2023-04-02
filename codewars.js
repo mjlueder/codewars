@@ -811,3 +811,19 @@ function comp(array1, array2){
 // console.log(comp([121, 144, 19, 161, 19, 144, 19, 11], [121, 14641, 20736, 361, 25921, 361, 20736, 361]))
 // console.log(comp([121, 144, 19, 161, 19, 144, 19, 11], [132, 14641, 20736, 361, 25921, 361, 20736, 361]));
 // console.log(comp(null, null));
+
+
+// Grasshopper
+// https://www.codewars.com/kata/5772da22b89313a4d50012f7/javascript
+
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+// Use conditionals to return the proper message:
+
+// case	return
+// name equals owner	'Hello boss'
+// otherwise	'Hello guest'
+
+function greet (name, owner) {
+  return name === owner ?  "Hello boss" : "Hello guest"
+}
