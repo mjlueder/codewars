@@ -827,3 +827,12 @@ function comp(array1, array2){
 function greet (name, owner) {
   return name === owner ?  "Hello boss" : "Hello guest"
 }
+
+
+// Make upper case
+
+// Write a function which converts the input string to uppercase.
+
+function makeUpperCase(str) {
+  // Code here
+}
