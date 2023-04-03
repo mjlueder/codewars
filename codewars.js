@@ -848,5 +848,25 @@ function makeUpperCase(str) {
 // If he doesn't get 10 hoops, return the string "Keep at it until you get it".
 
 function hoopCount (n) {
-  //your code goes here    
+  return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
 }
+
+
+// Abbreviate names 
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+function abbrevName(name){
+
+  // code away
+
+}
+
