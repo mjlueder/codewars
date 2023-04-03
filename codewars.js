@@ -798,7 +798,7 @@ function twoSum(numbers, target) {
 function comp(array1, array2){
   if ( !array1 || !array2 ) return false
   array1 = array1.map(num => (num*num))
-  array1 = array1.sort((a, b) => {return a - b})\
+  array1 = array1.sort((a, b) => {return a - b})
   array2 = array2.sort((a, b) => {return a - b})
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i] ) {
@@ -865,8 +865,9 @@ function hoopCount (n) {
 // patrick feeney => P.F
 
 function abbrevName(name){
-
-  // code away
-
+  name = name.split(' ')
+  return name[0][0].toUpperCase() + '.' + name[1][0].toUpperCase()
 }
+
+// console.log(abbrevName('Sam Harris'))
 
