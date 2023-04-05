@@ -940,7 +940,19 @@ function strCount(str, letter){
 // +5 dog years for each year after that
 
 var humanYearsCatYearsDogYears = function(humanYears) {
-  
+  let cat = 0
+  let dog = 0
+  if (humanYears === 1) {
+    cat = 15
+    dog = 15
+  } else if (humanYears === 2) {
+    cat = 24
+    dog = 24
+  } else {
+    cat = 24 + 4 * (humanYears - 2)
+    dog = 24 + 5 * (humanYears - 2)
+  }
+  return [humanYears,cat,dog];
 }
 
-console.log(humanYearsCatYearsDogYears(1));
+console.log(humanYearsCatYearsDogYears(3));
