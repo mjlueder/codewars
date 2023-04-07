@@ -964,5 +964,20 @@ var humanYearsCatYearsDogYears = function(humanYears) {
 // Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
 
 function isValidWalk(walk) {
-  //insert brilliant code here
+  if (walk.length !== 10) return false
+  let northSouth = 0
+  let eastWest = 0
+  walk.forEach(letter => {
+    if (letter === 'n') northSouth++
+    if (letter === 's') northSouth--
+    if (letter === 'e') eastWest++
+    if (letter === 'w') eastWest--
+  })
+  if (northSouth === 0 && eastWest === 0) {
+    return true
+  } else {
+    return false
+  }
 }
+
+// console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s']))
