@@ -993,19 +993,13 @@ function isValidWalk(walk) {
 // spinWords( "This is another test" )=> returns "This is rehtona test"
 
 function spinWords(string){
-  string = string.split(' ')
-  console.log(string);
-  
-  string = string.map((word) => {
+  return string.split(' ').map((word) => {
     if (word.length > 4) {
       return word = word.split('').reverse().join('')
     } else {
       return word
     }
-  })
-  console.log(string);
-  string = string.join(' ')
-  return string
+  }).join(' ')
 }
 
 console.log(spinWords( "Hey fellow warriors" ));
