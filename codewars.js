@@ -1057,5 +1057,36 @@ var runningSum = function(nums) {
 // Return the leftmost pivot index. If no such index exists, return -1.
 
 var pivotIndex = function(nums) {
-    
+  for (let i = 0; i < nums.length; i++){
+    if (i === 0) {
+      let sum = 0
+      for (let x = 1; x < nums.length; x++) {
+        sum += nums[x]
+        console.log(sum);
+      }
+      if (sum === 0) return 0
+    } else if (i === nums.length - 1) {
+      let sum = 0
+      for (let x = 0; x < nums.length - 1; x++) {
+        sum += nums[x]
+        console.log(sum);
+      }
+      if (sum === 0) return i
+    } else {
+      let sumL = 0
+      let sumR = 0
+      for (let x = 0; x < i; x++) {
+        sumL += nums[x]
+        console.log('idx ', i, ' sumL ', sumL);
+      }
+      for (let y = i + 1; y < nums.length; y++) {
+        sumR += nums[y]
+        console.log('idx ', i, ' sumR ', sumR);
+      }
+      if (sumL === sumR) return i
+    }
+  }
+  return -1
 };
+
+console.log(pivotIndex([-1,-1,0,1,1,0]));
