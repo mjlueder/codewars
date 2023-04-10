@@ -1038,13 +1038,10 @@ function spinWords(string){
  * @return {number[]}
  */
 var runningSum = function(nums) {
-  let newArr = []
-  nums.forEach((num, idx) => {
-      let sum = 0
-      for (let i = 0; i <= idx; i++){
-          sum += nums[i]
-      }
-      newArr.push(sum)
-  })
-  return newArr
+  for (let i = 1; i < nums.length; i++){
+    nums[i] = nums[i - 1] + nums[i]
+}
+  return nums
 };
+
+console.log(runningSum([3,1,2,10,1]));
