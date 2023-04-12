@@ -1091,5 +1091,11 @@ var pivotIndex = function(nums) {
 // The middle character(s) of the word represented as a string.
 
 function getMiddle(s){
-  //Code goes here!
+  if (s.length % 2) {
+    return s[Math.floor(s.length/2)]
+  } else {
+    return s.slice(s.length/2 - 1, s.length/2 + 1)
+  }
 }
+
+console.log(getMiddle('middle'));
