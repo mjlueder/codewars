@@ -1148,5 +1148,23 @@ var isIsomorphic = function(s, t) {
 // Output: false
 
 var isSubsequence = function(s, t) {
-  
+  // for (let i=0; i < s.length; i++) {
+  //   if(!t.split('').some(char => (char === s[i]))) {
+  //     return false
+  //   }
+  // }
+  let i=0;
+  let j=0;
+  while(i<s.length){
+    if(j===t.length){
+      return false;
+    }
+    if(s[i]===t[j]){
+      i++;
+    }
+    j++;
+  };
+  return true;
 };
+
+console.log(isSubsequence('abc', 'ahbgdc'));
