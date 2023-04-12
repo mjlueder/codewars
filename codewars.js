@@ -1073,7 +1073,7 @@ var pivotIndex = function(nums) {
 
 // console.log(pivotIndex([-1,-1,0,1,1,0]));
 
-// Middle Character
+// CW Middle Character
 
 // You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
@@ -1098,4 +1098,31 @@ function getMiddle(s){
   }
 }
 
-console.log(getMiddle('middle'));
+// console.log(getMiddle('middle'));
+
+// LC Isomorphic strings
+
+// Given two strings s and t, determine if they are isomorphic.
+
+// Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+
+// All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
+
+// Example 1:
+
+// Input: s = "egg", t = "add"
+// Output: true
+// Example 2:
+
+// Input: s = "foo", t = "bar"
+// Output: false
+// Example 3:
+
+// Input: s = "paper", t = "title"
+// Output: true
+
+var isIsomorphic = function(s, t) {
+    
+};
+
+// for loop: replace each
