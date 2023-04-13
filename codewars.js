@@ -1204,5 +1204,8 @@ const languages = {
 }
 
 function greet(language) {
-
+  if (language === 'IP_ADDRESS_INVALID' || language === 'IP_ADDRESS_NOT_FOUND' || language === 'IP_ADDRESS_REQUIRED'){
+    language = 'english'
+  }
+  return languages[language]
 }
