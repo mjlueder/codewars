@@ -1219,4 +1219,8 @@ function greet(language) {
 // You should not remove or add elements from/to the array.
 
 function twoSort(s) {
+  s = s.sort((a, b) => {return a.localeCompare(b)})
+  return s[0].split('').join('***')
 }
+
+// console.log(twoSort(["BTC","BTC","Bitcoin","Bitcoin","Classic","DarkCoin","DarkCoin","Factom","Lisk","Lisk","LiteCoin","Mine","Monero","Monero","ProofOfWork","Steem","Steem"]));
