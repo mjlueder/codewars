@@ -1243,12 +1243,55 @@ function twoSort(s) {
 
 // Input: list1 = [], list2 = [0]
 // Output: [0]
- 
+
 // Constraints:
 // The number of nodes in both lists is in the range [0, 50].
 // -100 <= Node.val <= 100
 // Both list1 and list2 are sorted in non-decreasing order.
 
 var mergeTwoLists = function(list1, list2) {
-  
+  let newArr = []
+  let i = 0
+  let j = 0
+  while (i < list1.length || j < list2.length) {
+    if (list1[i] < list2[j]) {
+      newArr.push(list1[i])
+      console.log('newArr, list 1 idx ' + i + ' ' + newArr);
+      i++
+    } else if (list2[j] < list1[i]){
+      newArr.push(list2[j])
+      console.log('newArr, list 2 idx ' + j + ' ' + newArr);
+      j++
+    } else if (list1[i] === list2[j]) {
+      newArr.push(list1[i])
+      newArr.push(list2[j])
+      i++
+      j++
+    } else if (i === list1.length) {
+      newArr.push(list2[j])
+      j++
+    } else if (j === list2.length) {
+      newArr.push(list1[i])
+      i++
+    }
+  }
+  return newArr
 };
+
+// console.log(mergeTwoLists([0], []));
+
+// Scrooge
+
+// Mr. Scrooge has a sum of money 'P' that he wants to invest. Before he does, he wants to know how many years 'Y' this sum 'P' has to be kept in the bank in order for it to amount to a desired sum of money 'D'.
+
+// The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly. After paying taxes 'T' for the year the new sum is re-invested.
+
+// Note to Tax: not the invested principal is taxed, but only the year's accrued interest
+
+// Your task is to complete the method provided and return the number of years 'Y' as a whole in order for Mr. Scrooge to get the desired sum.
+
+// Assumption: Assume that Desired Principal 'D' is always greater than the initial principal. However it is best to take into consideration that if Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
+
+function calculateYears(principal, interest, tax, desired) {
+  // your code
+}
