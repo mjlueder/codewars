@@ -1293,5 +1293,13 @@ var mergeTwoLists = function(list1, list2) {
 // Assumption: Assume that Desired Principal 'D' is always greater than the initial principal. However it is best to take into consideration that if Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
 
 function calculateYears(principal, interest, tax, desired) {
-  // your code
+  let years = 0
+  while (principal < desired) {
+    principal = principal + principal*interest - principal*interest*tax
+    years++
+  }
+  return Math.floor(years)
 }
+
+// console.log(calculateYears(1000, .05, .18, 1100));
+
