@@ -1334,5 +1334,9 @@ const rps = (p1, p2) => {
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
 function sumTwoSmallestNumbers(numbers) {  
-  //Code here
+  numbers = numbers.sort((a, b) => (a - b))
+  console.log(numbers);
+  return numbers[0] + numbers[1]
 }
+
+console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
