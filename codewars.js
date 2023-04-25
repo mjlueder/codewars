@@ -1351,5 +1351,18 @@ function sumTwoSmallestNumbers(numbers) {
 // [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
 
 function sortArray(array) {
-  // Return a sorted array.
+  if (array.every(num => num%2)) return array.sort((a,b) => a - b)
+  let oddArr = []
+  oddArr = array.filter(num => (num%2 === 1 || num%2 === -1)).sort((a,b) => a - b)
+  array = array.map(num => num%2 ? null : num)
+  let oddIdx = 0
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === null) {
+      array[i] = oddArr[oddIdx]
+      oddIdx++
+    }
+  }
+  return array
 }
+
+console.log(sortArray([ -7, -4, 0, 4, 5 ]));
