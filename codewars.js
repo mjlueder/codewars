@@ -1380,6 +1380,18 @@ function sortArray(array) {
 // Your code must return true or false (not 'true' and 'false') depending upon whether the given number is a Narcissistic number in base 10.
 
 function narcissistic(value) {
-  // Code me to return true or false
+  let string = value.toString()
+  console.log(string)
+  let length = string.length
+  console.log(length)
+  string = string.split('')
+  console.log(string)
+  let nums = string.map(char => Math.pow(parseInt(char), length))
+  console.log(nums);
+  let sum = nums.reduce((acc, prev) => (acc + prev))
+  console.log(sum);
+  return sum === value
 }
+
+console.log(narcissistic(153));
 
