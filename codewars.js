@@ -1382,7 +1382,9 @@ function sortArray(array) {
 function narcissistic(value) {
   let string = value.toString()
   let length = string.length
-  let sum = string.split('').map(char => Math.pow(parseInt(char), length)).reduce((acc, prev) => (acc + prev))
+  let sum = string.split('')
+    .map(char => Math.pow(parseInt(char), length))
+    .reduce((acc, prev) => (acc + prev))
   return sum === value
 }
 
