@@ -1429,5 +1429,19 @@ function filter_list(l) {
 // 2 --> 3 + 5 = 8
 
 function rowSumOddNumbers(n) {
-	
+	let row = 1, num = 1, increase = 2
+  while (row < n) {
+    num += increase
+    increase += 2
+    row++
+  }
+  let sum = 0
+  for (let i = 0; i < row; i++) {
+    sum += num
+    num +=2
+  }
+  return sum
 }
+
+// console.log(rowSumOddNumbers(2));
+
