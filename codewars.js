@@ -1461,3 +1461,16 @@ function rentalCarCost(d) {
   // }
   return d >= 7 ? d * 40 - 50 : (d >=3 ? d * 40 - 20 : d * 40)
 }
+
+// The function should take three arguments - operation(string/char), value1(number), value2(number).
+// The function should return result of numbers after applying the chosen operation.
+
+// Examples(Operator, value1, value2) --> output
+// ('+', 4, 7) --> 11
+// ('-', 15, 18) --> -3
+// ('*', 5, 5) --> 25
+// ('/', 49, 7) --> 7
+
+function basicOp(operation, value1, value2){
+  // Code
+}
