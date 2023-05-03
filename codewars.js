@@ -1490,5 +1490,13 @@ function basicOp(operation, value1, value2){
 // Given the head of a singly linked list, reverse the list, and return the reversed list.
 
 var reverseList = function(head) {
-  
+  let prevNode = null;
+  let currentNode = head;
+  while (currentNode !== null) {
+    let nextNode = currentNode.next;
+    currentNode.next = prevNode;
+    prevNode = currentNode;
+    currentNode = nextNode;
+  }
+  return prevNode;
 };
