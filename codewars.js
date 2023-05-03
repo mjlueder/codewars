@@ -1483,4 +1483,12 @@ function basicOp(operation, value1, value2){
   } 
 }
 
-console.log(basicOp('+', 4, 7));
+// console.log(basicOp('+', 4, 7));
+
+// Reverse Linked list
+
+// Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+var reverseList = function(head) {
+  
+};
