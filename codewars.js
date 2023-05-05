@@ -1506,5 +1506,7 @@ var reverseList = function(head) {
 // For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 
 function disemvowel(str) {
-  return str;
+  return str.split('').filter(char => (char !== 'a' && char !== 'e' && char !== 'i' && char !== 'o' && char !== 'u' && char !== 'A' && char !== 'E' && char !== 'I' && char !== 'O' && char !== 'U')).join('')
 }
+
+console.log(disemvowel("This website is for losers LOL!"));
