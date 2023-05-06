@@ -1521,3 +1521,11 @@ function disemvowel(str) {
 function removeEveryOther(arr){
   return arr.filter((el, idx) => ((idx % 2) === 0 ))
 }
+
+// Given the head of a singly linked list, return the middle node of the linked list.
+
+// If there are two middle nodes, return the second middle node.
+
+var middleNode = function(head) {
+
+}
