@@ -1527,5 +1527,16 @@ function removeEveryOther(arr){
 // If there are two middle nodes, return the second middle node.
 
 var middleNode = function(head) {
-
+  let count = 1
+  let currentNode = head
+  while (currentNode.next) {
+    count++
+    currentNode = currentNode.next
+  }
+  let half = Math.floor(count / 2) + 1
+  currentNode = head
+  for (let i = 1; i < half; i++) {
+    currentNode = currentNode.next
+  } 
+  return currentNode
 }
