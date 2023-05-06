@@ -1541,7 +1541,7 @@ function removeEveryOther(arr){
 //   return currentNode
 // }
 
-ALT:
+// ALT:
 
 const middleNode = function(head) {
   let last = head;
@@ -1565,5 +1565,18 @@ const middleNode = function(head) {
 // For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 
 function countPositivesSumNegatives(input) {
-  // your code here
+  let count = 0, sum = 0
+  if (!input || !input.length) {
+    return []
+  }
+  input.forEach(el => {
+    if (el < 0) {
+      sum += el
+    } else if (el > 0){
+      count++
+    }
+  })
+  return [count, sum]
 }
+
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
