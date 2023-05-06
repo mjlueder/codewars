@@ -1526,17 +1526,31 @@ function removeEveryOther(arr){
 
 // If there are two middle nodes, return the second middle node.
 
-var middleNode = function(head) {
-  let count = 1
-  let currentNode = head
-  while (currentNode.next) {
-    count++
-    currentNode = currentNode.next
+// var middleNode = function(head) {
+//   let count = 1
+//   let currentNode = head
+//   while (currentNode.next) {
+//     count++
+//     currentNode = currentNode.next
+//   }
+//   let half = Math.floor(count / 2) + 1
+//   currentNode = head
+//   for (let i = 1; i < half; i++) {
+//     currentNode = currentNode.next
+//   } 
+//   return currentNode
+// }
+
+ALT:
+
+const middleNode = function(head) {
+  let last = head;
+  let first = head;
+
+  while (first !== null && first.next !== null) {
+    last = last.next;
+    first = first.next.next;
   }
-  let half = Math.floor(count / 2) + 1
-  currentNode = head
-  for (let i = 1; i < half; i++) {
-    currentNode = currentNode.next
-  } 
-  return currentNode
-}
+
+  return last;
+};
