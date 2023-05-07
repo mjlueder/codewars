@@ -1595,10 +1595,27 @@ function countPositivesSumNegatives(input) {
 // encrypt("01234", 2)  =>  "13024"  ->  "32104"
 // encrypt("01234", 3)  =>  "13024"  ->  "32104"  ->  "20314"
 
+// Together with the encryption function, you should also implement a decryption function which reverses the process.
+
+// If the string S is an empty value or the integer N is not positive, return the first argument without changes.
+
 function encrypt(text, n) {
+  if (text === '' || n < 1) return text
+  let even = [], odd = []
+  for (let i = 0; i < n; i++){
+    text = text.split('')
+    even = text.filter((num, idx) => (!(idx % 2))).join('')
+    console.log(even);
+    odd = text.filter((num, idx) => (idx % 2)).join('')
+    console.log(odd);
+    text = odd + even
+    console.log(text);
+  }
 
 }
 
 function decrypt(encryptedText, n) {
 
 }
+
+console.log(encrypt("012345", 2));
