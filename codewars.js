@@ -1579,4 +1579,26 @@ function countPositivesSumNegatives(input) {
   return [count, sum]
 }
 
-console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+// console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+
+// Encryption
+
+// Implement a pseudo-encryption algorithm which given a string S and an integer N concatenates all the odd-indexed characters of S with all the even-indexed characters of S, this process should be repeated N times.
+
+// Examples:
+
+// encrypt("012345", 1)  =>  "135024"
+// encrypt("012345", 2)  =>  "135024"  ->  "304152"
+// encrypt("012345", 3)  =>  "135024"  ->  "304152"  ->  "012345"
+
+// encrypt("01234", 1)  =>  "13024"
+// encrypt("01234", 2)  =>  "13024"  ->  "32104"
+// encrypt("01234", 3)  =>  "13024"  ->  "32104"  ->  "20314"
+
+function encrypt(text, n) {
+
+}
+
+function decrypt(encryptedText, n) {
+
+}
