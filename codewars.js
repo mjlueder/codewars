@@ -1600,7 +1600,7 @@ function countPositivesSumNegatives(input) {
 // If the string S is an empty value or the integer N is not positive, return the first argument without changes.
 
 function encrypt(text, n) {
-  if (text === '' || n < 1) return text
+  if (!text || n < 1) return text
   let even = [], odd = []
   for (let i = 0; i < n; i++){
     text = text.split('')
@@ -1612,7 +1612,7 @@ function encrypt(text, n) {
 }
 
 function decrypt(encryptedText, n) {
-  if (text === '' || n < 1) return encryptedText
+  if (!encryptedText || n < 1) return encryptedText
   let half, even, odd, newArr
   for (let i = 0; i < n; i++){
     newArr = []
