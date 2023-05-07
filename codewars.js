@@ -1605,17 +1605,27 @@ function encrypt(text, n) {
   for (let i = 0; i < n; i++){
     text = text.split('')
     even = text.filter((num, idx) => (!(idx % 2))).join('')
-    console.log(even);
     odd = text.filter((num, idx) => (idx % 2)).join('')
-    console.log(odd);
     text = odd + even
-    console.log(text);
   }
-
+  return text
 }
 
 function decrypt(encryptedText, n) {
-
+  if (text === '' || n < 1) return encryptedText
+  let half, even, odd, newArr
+  for (let i = 0; i < n; i++){
+    newArr = []
+    half = Math.floor(encryptedText.length / 2)
+    odd = encryptedText.slice(0, half)
+    even = encryptedText.slice(half, encryptedText.length)
+    for (let x = 0; x < (half + 1); x++){
+      if (even[x]) newArr.push(even[x])
+      if (odd[x]) newArr.push(odd[x])
+    }
+    encryptedText = newArr.join('')
+  }
+  return encryptedText
 }
 
-console.log(encrypt("012345", 2));
+console.log(decrypt("32104", 2));
