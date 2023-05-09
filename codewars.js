@@ -1679,5 +1679,9 @@ var detectCycle = function(head) {
 // Hint: Don't forget to check for bad values like null/undefined
 
 function countSheeps(arrayOfSheep) {
-  // TODO May the force be with you
+  let sheepCount = 0
+  arrayOfSheep.forEach(sheep => {
+    if (sheep) sheepCount++
+  })
+  return sheepCount
 }
