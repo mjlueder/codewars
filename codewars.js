@@ -1679,9 +1679,11 @@ var detectCycle = function(head) {
 // Hint: Don't forget to check for bad values like null/undefined
 
 function countSheeps(arrayOfSheep) {
-  let sheepCount = 0
-  arrayOfSheep.forEach(sheep => {
-    if (sheep) sheepCount++
-  })
-  return sheepCount
+  // let sheepCount = 0
+  // arrayOfSheep.forEach(sheep => {
+  //   if (sheep) sheepCount++
+  // })
+  // return sheepCount
+
+  return arrayOfSheep.filter(Boolean).length
 }
