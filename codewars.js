@@ -1705,5 +1705,14 @@ function countSheeps(arrayOfSheep) {
 // Signature will always contain 3 numbers; n will always be a non-negative number; if n == 0, then return an empty array (except in C return NULL) and be ready for anything else which is not clearly specified ;)
 
 function tribonacci(signature,n){
-  //your code here
+  if (n === 0) return []
+  if (n === 1) return [signature[0]]
+  if (n === 2) return [signature[0], signature[1]]
+  if (n === 3) return signature
+  for (let i = 3; i < n; i++){
+    signature[i] = signature[i - 1] + signature[i - 2] + signature[i - 3]
+  }
+  return signature
 }
+
+console.log(tribonacci([1, 2, 3], 4));
