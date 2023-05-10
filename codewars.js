@@ -1,11 +1,8 @@
-
-
 function solution(str, ending) {
   return (str.substring(str.length - ending.length) === ending)
 }
 
 // console.log(solution('abcdebc', 'bc'));
-
 
 //capitalize each word. Your task is to convert strings to how they would be written by Jaden Smith. 
 
@@ -18,9 +15,6 @@ String.prototype.toJadenCase = function () {
 };
 
 // console.log(str.toJadenCase())
-
-
-
 
 // Your task is to write a function which returns the sum of following series upto nth term(parameter).
 
@@ -47,8 +41,6 @@ function SeriesSum(n) {
 
 // console.log(SeriesSum(0));
 
-
-
 // Clock shows h hours, m minutes and s seconds after midnight.
 
 // Your task is to write a function which returns the time since midnight in milliseconds.
@@ -60,7 +52,6 @@ function past(h, m, s){
 
 // Alt:  return ((h*3600)+(m*60)+s)*1000;
 
-
 // Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
 
 // You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
@@ -68,7 +59,6 @@ function past(h, m, s){
 function litres(time) {
   return `liters = ${Math.floor(time*0.5)}`
 }
-
 
 //You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
 
@@ -80,13 +70,9 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return mpg*fuelLeft > distanceToPump
 };
 
-
-
-
 // Complete the square sum function so that it squares each number passed into it and then sums the results together.
 
 // For example, for [1, 2, 2] it should return 9 
-
 
 function squareSum(numbers){
   let sum = 0
@@ -95,8 +81,6 @@ function squareSum(numbers){
   });
   return sum
 }
-
-
 
 // Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
 
@@ -107,14 +91,11 @@ function squareSum(numbers){
 
 // Input: 123456789 Output: 987654321
 
-
 function descendingOrder(n){
   return parseInt(n.toString().split('').sort().reverse().join(''))
 }
 
 // console.log(descendingOrder(42145))
-
-
 
 // The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
 
@@ -139,8 +120,6 @@ function openOrSenior(data){
 
 // console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
 
-
-
 // You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
 
 // Write a program that returns the girl's age (0-9) as an integer.
@@ -152,8 +131,6 @@ function getAge(inputString){
 }
 
 // console.log(getAge("1 year old"))
-
-
 
 // Grade book
 // Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
@@ -185,8 +162,6 @@ function getGrade (s1, s2, s3) {
 // console.log(getGrade(84,79,85));
 // console.log(getGrade(60,82,76));
 
-
-
 // We need a function that can transform a number (integer) into a string.
 
 // What ways of achieving this do you know?
@@ -213,8 +188,6 @@ function digitize(n) {
 }
 
 // console.log(digitize(1234));
-
-
 
 // Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
 
@@ -249,7 +222,6 @@ function getSum(a, b) {
 
 // console.log(getSum(0, -1))
 
-
 // Perfect Square
 
 // You might know some pretty large perfect squares. But what about the NEXT one?
@@ -268,10 +240,7 @@ function findNextSquare(sq) {
   let x = Math.sqrt(sq)
   return Number.isInteger(x) ? ((x + 1) * (x + 1)) : -1
 }
-
 // console.log(findNextSquare(114))
-
-
 
 // Reverse words
 
@@ -315,8 +284,6 @@ function alsoReverseWords (str) {
 // console.log(reverseWords("The quick brown fox jumps over the lazy dog."))
 // console.log(alsoReverseWords("The quick brown fox jumps over the lazy dog."))
 
-
-
 // Binary Addition
 
 // Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
@@ -334,10 +301,7 @@ function addBinary(a,b) {
 
 // console.log(addBinary(50, 50));
 
-
-
 // Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
-
 
 // function removeExclamationMarks(s) {
 //   return s.split('').filter(c => (c !== '!')).join('')
@@ -348,7 +312,6 @@ function removeExclamationMarks(s) {
 }
 
 // console.log(removeExclamationMarks('!test!'));
-
 
 // You are given an odd-length array of integers, in which all of them are the same, except for one single number.
 
@@ -374,8 +337,6 @@ const strayAlt = nums => nums.reduce((a, b) => a ^ b);
 
 // console.log(stray([2, 1, 2]))
 
-
-
 // Friend or Foe?
 
 // Make a program that filters a list of strings and returns a list with only your friends name in it.
@@ -394,8 +355,6 @@ function friend(friends){
 }
 
 // console.log(friend(["Ryan", "Kieran", "Jason", "Yous"]));
-
-
 
 // Regex PIN code validation
 
@@ -418,8 +377,6 @@ function validatePIN (pin) {
 // console.log(validatePIN("123456"));
 // console.log(validatePIN("1234e6"));
 
-
-
 // The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
 
 // For example:
@@ -430,12 +387,9 @@ function validatePIN (pin) {
 function cockroachSpeed(s) {
   return Math.floor(s * 1000 / 36)
 }
-
 // console.log(cockroachSpeed('1.08'))
 
 // speed * 100,000cm/km * 1hr/3600 seconds
-
-
 
 // Unique in Order
 
@@ -463,7 +417,6 @@ var uniqueInOrder=function(iterable){
 }
 
 // console.log(uniqueInOrder([1,2,2,3,3]))
-
 
 // Cubes
 
@@ -496,8 +449,6 @@ function findNb(m) {
 // console.log(findNb(-2))
 // console.log(findNb(1071228));
 
-
-
 // Population Growth
 
 // In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
@@ -522,8 +473,6 @@ function nbYear(p0, percent, aug, p) {
 }
 
 // console.log(nbYear(1500000, 2.5, 10000, 2000000));
-
-
 
 // Camel case
 
@@ -552,7 +501,6 @@ function camelCase (string) {
 
 // console.log(camelCase("lifeAbleAbleHave"))
 
-
 // Bouncing Ball
 
 // A child is playing with a ball on the nth floor of a tall building. The height of this floor above ground level, h, is known.
@@ -572,7 +520,6 @@ function camelCase (string) {
 // Note:
 // The ball can only be seen if the height of the rebounding ball is strictly greater than the window parameter.
 
-
 // check conditions
 // initiate a counting variable
 // set up a while loop to calculate passes
@@ -591,7 +538,6 @@ function bouncingBall(h,  bounce,  window) {
 
 // console.log(bouncingBall(100, .5, 10))
 
-
 // Counting Duplicates
 
 // Count the number of Duplicates
@@ -609,7 +555,6 @@ function bouncingBall(h,  bounce,  window) {
 // make lower case
 // loop? for each? filter?
 // while text.length > 0, forEach,
-
 
 function duplicateCount(text){
   text = text.toLowerCase().split('')
@@ -632,8 +577,6 @@ function duplicateCount(text){
 
 // console.log(duplicateCount(""));
 
-
-
 // Highest and Lowest
 
 // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
@@ -653,16 +596,12 @@ function highAndLow(numbers){
   // max = numbers[numbers.length - 1]
   // return max + ' ' + min
 
-
-
   // Alternative
   numbers = numbers.split(' ')
   return `${Math.max(...numbers)} ${Math.min(...numbers)}`
 }
 
 // console.log(highAndLow("1 9 3 4 -5"));
-
-
 
 // House Robber 
 
@@ -682,7 +621,6 @@ function highAndLow(numbers){
 // Output: 12
 // Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
 // Total amount you can rob = 2 + 9 + 1 = 12.
- 
 
 // Constraints:
 
@@ -736,8 +674,6 @@ var rob = function(nums) {
 // console.log(rob([1, 9, 2, 7, 1, 1, 8, 1]));
 // console.log(rob([1, 7, 9, 8, 1]));
 // console.log(rob([4, 7, 9, 8, 4]));
-
-
 
 // Two sum
 
@@ -812,7 +748,6 @@ function comp(array1, array2){
 // console.log(comp([121, 144, 19, 161, 19, 144, 19, 11], [132, 14641, 20736, 361, 25921, 361, 20736, 361]));
 // console.log(comp(null, null));
 
-
 // Grasshopper
 // https://www.codewars.com/kata/5772da22b89313a4d50012f7/javascript
 
@@ -828,7 +763,6 @@ function greet (name, owner) {
   return name === owner ?  "Hello boss" : "Hello guest"
 }
 
-
 // Make upper case
 
 // Write a function which converts the input string to uppercase.
@@ -836,7 +770,6 @@ function greet (name, owner) {
 function makeUpperCase(str) {
   return str.toUpperCase()
 }
-
 
 // Hula hoop!
 
@@ -850,7 +783,6 @@ function makeUpperCase(str) {
 function hoopCount (n) {
   return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
 }
-
 
 // Abbreviate names 
 
@@ -890,7 +822,6 @@ function expandedForm(num) {
 }
 
 // console.log(expandedForm(70304))
-
 
 // Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.
 
@@ -1726,5 +1657,11 @@ function tribonacci(signature,n){
 // --> [1, 2, 3, 4]
 
 function between(a, b) {
-  // your code here
+  let arr = []
+  for (let i = a; i <= b; i++) {
+    arr.push(i)
+  }
+  return arr
 }
+
+console.log(between(1, 4));
