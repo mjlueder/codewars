@@ -1713,5 +1713,16 @@ var maxSequence = function(arr){
 // Explanation: In this case, no transactions are done and the max profit = 0.
 
 var maxProfit = function(prices) {
-    
-};
+  let max = 0, current
+  for (let i = 0; i < prices.length; i++) {
+    for (let x = i + 1; x < prices.length; x++) {
+      current = prices[x] - prices[i]
+      if (current > max) {
+        max = current
+      }
+    }
+  }
+  return max
+}
+
+// console.log(maxProfit([1, 2, 3]));
