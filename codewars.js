@@ -1773,5 +1773,25 @@ var maxProfit = function(prices) {
 // Think about how you could use a two-pointer technique after sorting the intervals. One pointer could represent the current interval you're considering for the output, and the other could scan ahead to see if the next interval overlaps with it. If it does, you can update the current interval's end time. If it doesn't, you can add the current interval to the output and move on to the next one.
 
 function mergeIntervals(intervals) {
-  // Your code here
+  intervals = intervals.sort((a, b) => (a[0] - b[0]))
+  let current, next, i = 0
+
+  while (i < intervals.length - 1) {
+    current = intervals[i]
+    next = intervals[i+1]
+    if (current[1] > next[0]) {
+      if (current[1] > next[1]) {
+        intervals[i+1] = current
+        intervals[i] = null
+      } else {
+        intervals[i+1] = [current[0], next[1]]
+        intervals[i] = null
+      }
+    }
+    i++
+  }
+
+  return intervals.filter(el => el)
 }
+
+console.log(mergeIntervals([[1, 3], [2, 6], [8, 10], [15, 18]]));
