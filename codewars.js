@@ -1735,3 +1735,43 @@ var maxProfit = function(prices) {
 }
 
 // console.log(maxProfit([1, 2, 3]));
+
+// You are developing a feature for a workout app that tracks a user's exercises in a session. Each exercise is represented by an interval of start and end times (in minutes) relative to the start of the session.
+
+// However, the user can sometimes enter overlapping intervals for different exercises (for example, the user might enter that they did push-ups from the 10th to the 20th minute and also that they did squats from the 15th to the 25th minute).
+
+// Your task is to write a function that takes an array of intervals and returns a new array of intervals where all overlapping intervals have been merged. The intervals in the output should be sorted by their start times.
+
+// Function Signature
+// javascript or any language you'd like
+
+// /**
+//  * @param {number[][]} intervals
+//  * @return {number[][]}
+//  */
+
+// Constraints
+// The input array has at most length 10^4.
+// Each interval is an array of two integers, where 0 <= start < end <= 10^6.
+// The intervals may not be sorted in any particular order.
+// The function should run in O(n log n) time due to the sorting requirement.
+// The function should use O(1) additional space, not counting the space used for the output.
+// Example
+// javascript
+
+// mergeIntervals([[1, 3], [2, 6], [8, 10], [15, 18]])
+// // returns [[1, 6], [8, 10], [15, 18]]
+
+// mergeIntervals([[6,8],[1,9],[2,4],[4,7]])
+// // returns [[1,9]]
+// Note
+// In the first example, [1, 3] and [2, 6] overlap, so they are merged into [1, 6]. The other intervals do not overlap with anything, so they are included in the output as-is.
+
+// In the second example, all intervals overlap with each other, so they are all merged into [1, 9].
+
+// Hints
+// Think about how you could use a two-pointer technique after sorting the intervals. One pointer could represent the current interval you're considering for the output, and the other could scan ahead to see if the next interval overlaps with it. If it does, you can update the current interval's end time. If it doesn't, you can add the current interval to the output and move on to the next one.
+
+function mergeIntervals(intervals) {
+  // Your code here
+}
