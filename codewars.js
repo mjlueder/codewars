@@ -1780,7 +1780,7 @@ function mergeIntervals(intervals) {
     current = intervals[i]
     next = intervals[i+1]
     if (current[1] > next[0]) {
-      if (current[1] > next[1]) {
+      if (current[1] >= next[1]) {
         intervals[i+1] = current
         intervals[i] = null
       } else {
@@ -1794,4 +1794,35 @@ function mergeIntervals(intervals) {
   return intervals.filter(el => el)
 }
 
-console.log(mergeIntervals([[1, 3], [2, 6], [8, 10], [15, 18]]));
+// console.log(mergeIntervals([[1, 3], [2, 6], [8, 10], [15, 18]])); 
+// // Expected output: [[1, 6], [8, 10], [15, 18]]
+
+// Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters.
+
+// Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
+
+ 
+
+// Example 1:
+
+// Input: s = "abccccdd"
+// Output: 7
+// Explanation: One longest palindrome that can be built is "dccaccd", whose length is 7.
+// Example 2:
+
+// Input: s = "a"
+// Output: 1
+// Explanation: The longest palindrome that can be built is "a", whose length is 1.
+
+function isPalindrome(str){
+  str = str.toUpperCase()
+  str = str.replaceAll(' ', '')
+  let arr = str.split('')
+  arr = arr.reverse()
+  let revStr = arr.join('')
+e  if (str === revStr){
+    return true
+  } else {
+    return false
+  }
+}
