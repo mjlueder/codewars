@@ -1801,28 +1801,33 @@ function mergeIntervals(intervals) {
 
 // Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
 
- 
-
 // Example 1:
-
 // Input: s = "abccccdd"
 // Output: 7
 // Explanation: One longest palindrome that can be built is "dccaccd", whose length is 7.
-// Example 2:
 
+// Example 2:
 // Input: s = "a"
 // Output: 1
 // Explanation: The longest palindrome that can be built is "a", whose length is 1.
 
-function isPalindrome(str){
-  str = str.toUpperCase()
-  str = str.replaceAll(' ', '')
-  let arr = str.split('')
-  arr = arr.reverse()
-  let revStr = arr.join('')
-e  if (str === revStr){
-    return true
+var longestPalindrome = function(s) {
+  let countArr = [], count
+  s = s.split('')
+  s.forEach(char => {
+    if (s.length) {
+      count = s.filter(el => (el === char))
+      s = s.filter(el => el !== char)
+      if (count.length) countArr.push(count.length)
+    }
+  })
+  console.log(countArr);
+  if (countArr.every(el => !(el % 2))) {
+    return countArr.reduce((prev, acc) => (prev + acc))
   } else {
-    return false
+    countArr = countArr.map(el => (el % 2 ? el - 1 : el))
+    return countArr.reduce((prev, acc) => (prev + acc)) + 1
   }
 }
+
+console.log(longestPalindrome("aaabbccccdd"));
