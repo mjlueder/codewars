@@ -1812,22 +1812,48 @@ function mergeIntervals(intervals) {
 // Explanation: The longest palindrome that can be built is "a", whose length is 1.
 
 var longestPalindrome = function(s) {
-  let countArr = [], count
-  s = s.split('')
-  s.forEach(char => {
-    if (s.length) {
-      count = s.filter(el => (el === char))
-      s = s.filter(el => el !== char)
-      if (count.length) countArr.push(count.length)
+  // let countArr = [], count
+  // s = s.split('')
+  // s.forEach(char => {
+  //   if (s.length) {
+  //     count = s.filter(el => (el === char))
+  //     s = s.filter(el => el !== char)
+  //     if (count.length) countArr.push(count.length)
+  //   }
+  // })
+  // console.log(countArr);
+  // if (countArr.every(el => !(el % 2))) {
+  //   return countArr.reduce((prev, acc) => (prev + acc))
+  // } else {
+  //   countArr = countArr.map(el => (el % 2 ? el - 1 : el))
+  //   return countArr.reduce((prev, acc) => (prev + acc)) + 1
+  // }
+
+    // Create a character frequency map
+    const charMap = new Map();
+    for (let char of s) {
+      if (charMap.has(char)) {
+        charMap.set(char, charMap.get(char) + 1);
+      } else {
+        charMap.set(char, 1);
+      }
     }
-  })
-  console.log(countArr);
-  if (countArr.every(el => !(el % 2))) {
-    return countArr.reduce((prev, acc) => (prev + acc))
-  } else {
-    countArr = countArr.map(el => (el % 2 ? el - 1 : el))
-    return countArr.reduce((prev, acc) => (prev + acc)) + 1
-  }
+    
+    let longestPalindromeLength = 0;
+    let oddCharCount = 0;
+    
+    // Iterate through the character frequency map
+    for (let count of charMap.values()) {
+      if (count % 2 === 0) {
+        longestPalindromeLength += count;
+      } else {
+        longestPalindromeLength += count - 1;
+        oddCharCount = 1;
+      }
+    }
+    
+    // Add an additional odd character if present
+    return longestPalindromeLength + oddCharCount;
 }
 
 console.log(longestPalindrome("aaabbccccdd"));
