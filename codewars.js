@@ -1915,5 +1915,20 @@ function count(string) {
 // Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 
 var preorder = function(root) {
-
+  const result = [];
+  
+  function traverse(node) {
+    if (node === null) {
+      return;
+    }
+    
+    result.push(node.val); // Assuming each node has a 'val' property for its value
+    
+    for (const child of node.children) {
+      traverse(child);
+    }
+  }
+  
+  traverse(root);
+  return result;
 };
