@@ -1888,5 +1888,14 @@ var maxSequence = function(arr){
 // What if the string is empty? Then the result should be empty object literal, {}.
 
 function count(string) {
-  
+  let tally = {}, letter
+  for (let i = 0; i < string.length; i++){
+    letter = string[i]
+    if(tally[letter]){
+      tally[letter]++
+    } else {
+      tally[letter] = 1
+    }
+  }
+  return tally
 }
