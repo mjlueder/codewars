@@ -1890,12 +1890,13 @@ var maxSequence = function(arr){
 function count(string) {
   let tally = {}, letter
   for (let i = 0; i < string.length; i++){
-    letter = string[i]
-    if(tally[letter]){
-      tally[letter]++
-    } else {
-      tally[letter] = 1
-    }
+    // letter = string[i]
+    // if(tally[letter]){
+    //   tally[letter]++
+    // } else {
+    //   tally[letter] = 1
+    // }
+    tally[letter] ? tally[letter]++ : tally[letter] = 1
   }
   return tally
 }
