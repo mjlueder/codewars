@@ -1940,5 +1940,7 @@ var preorder = function(root) {
 // The input string will only consist of lower case letters and/or spaces.
 
 function getCount(str) {
-  return 0;
+  let vowels = /[aeiou]/gi
+  let matches = str.match(vowels)
+  return matches ? matches.length : 0
 }
