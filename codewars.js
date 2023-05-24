@@ -1945,10 +1945,20 @@ function getCount(str) {
   return matches ? matches.length : 0
 }
 
-Boolean to string
+// Boolean to string
 
-Implement a function which convert the given boolean value into its string representation.
+// Implement a function which convert the given boolean value into its string representation.
 
 function booleanToString(b){
   return b ? "true" : "false"
+}
+
+// Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+
+// * url = "http://github.com/carbonfive/raygun" -> domain name = "github"
+// * url = "http://www.zombie-bites.com"         -> domain name = "zombie-bites"
+// * url = "https://www.cnet.com"                -> domain name = "cnet"
+
+function domainName(url){
+  //your code here
 }
