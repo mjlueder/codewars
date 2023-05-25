@@ -1979,5 +1979,12 @@ function domainName(url){
 // countBy(2,5) === [2,4,6,8,10]
 
 function countBy(x, n) {
-  
+  let z = [], num = x
+  for (let i = 0; i < n; i++){
+    z.push(num)
+    num += x
+  }
+  return z;
 }
+
+console.log(countBy(2, 5));
