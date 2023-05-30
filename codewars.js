@@ -1998,4 +1998,10 @@ function solution(str){
   return str.split('').reverse().join('')
 }
 
-console.log(solution('world'));
+// console.log(solution('world'));
+
+// write a function to return the square of an argument
+
+function square(arg){
+
+}
