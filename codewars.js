@@ -2003,5 +2003,5 @@ function solution(str){
 // write a function to return the square of an argument
 
 function square(arg){
-
+  return arg * arg
 }
