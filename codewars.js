@@ -2022,5 +2022,9 @@ function square(arg){
 function gooseFilter (birds) {
   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
   
+  birds = birds.filter(bird => (bird !== geese[0] && bird !== geese[1] && bird !== geese[2] && bird !== geese[3] && bird !== geese[4]))
 
+  return birds
 };
+
+// console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
