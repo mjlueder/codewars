@@ -2041,5 +2041,20 @@ function gooseFilter (birds) {
 // "GTAT" --> "CATA"
 
 function DNAStrand(dna){
-  
+  dna = dna.split('').map(nucleotide => {
+    if (nucleotide === 'A') {
+      return 'T'
+    } else if (nucleotide === 'T') {
+      return 'A'
+    } else if (nucleotide === 'C') {
+      return 'G'
+    } else if (nucleotide === 'G') {
+      return 'C'
+    } else {
+      return '-unknown nucleotide-'
+    }
+  })
+  return dna.join('')
 }
+
+console.log(DNAStrand("GTAT"));
