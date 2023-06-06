@@ -2083,5 +2083,9 @@ console.log(DNAStrand("GTAT"));
 // (In this case, all triangles must have surface greater than 0 to be accepted).
 
 function isTriangle(a,b,c){
-
+  if (a + b + c - Math.max(a, b, c) > Math.max(a, b, c)) {
+    return true
+  } else {
+    return false
+  }
 }
