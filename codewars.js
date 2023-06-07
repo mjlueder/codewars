@@ -2086,4 +2086,10 @@ function isTriangle(a,b,c){
   return (a + b + c - Math.max(a, b, c) > Math.max(a, b, c)) 
 }
 
-console.log(isTriangle(2, 2, 3));
+// console.log(isTriangle(2, 2, 3));
+
+// Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+function shortcut (string) {
+  
+}
