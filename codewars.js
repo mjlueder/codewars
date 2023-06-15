@@ -2111,4 +2111,39 @@ String.prototype.isUpperCase = function() {
   return this == this.toUpperCase()
 }
 
-console.log('ROSCOE AND '.isUpperCase());
+// console.log('ROSCOE AND '.isUpperCase());
+
+// Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+function longest(s1, s2) {
+  return [...new Set(s1+s2)].sort().join('')
+}
+
+// Your job is to write a function which increments a string, to create a new string.
+
+// If the string already ends with a number, the number should be incremented by 1.
+// If the string does not end with a number. the number 1 should be appended to the new string.
+// Examples:
+
+// foo -> foo1
+// foobar23 -> foobar24
+// foo0042 -> foo0043
+
+// If the number has leading zeros the amount of digits should be considered.
+
+function incrementString (string) {
+
+}
+
+// console.log(parseInt('1')); // 1
+// console.log(parseInt('a')); // NaN
+// console.log(parseInt('0'));
+// console.log(incrementString('yo1203'));
