@@ -2140,10 +2140,29 @@ function longest(s1, s2) {
 // If the number has leading zeros the amount of digits should be considered.
 
 function incrementString (string) {
+  // if (isNaN(parseInt(string[string.length - 1]))) {
+  //   return string + '1'
+  // }
+  // // still need to consider if it ends in 0
 
+  // let Arr = string.split('')
+  // for (let i = string.length - 1; i >= 0; i--){
+  //   console.log(parseInt(string[i]));
+  // }
+  
 }
 
 // console.log(parseInt('1')); // 1
 // console.log(parseInt('a')); // NaN
 // console.log(parseInt('0'));
 // console.log(incrementString('yo1203'));
+
+// Write a function that returns a string in which firstname is swapped with last name.
+
+// Example(Input --> Output)
+
+// "john McClane" --> "McClane john"
+
+function nameShuffler(str){
+  //Shuffle It
+}
