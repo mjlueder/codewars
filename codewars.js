@@ -2224,16 +2224,18 @@ function longestConsec(strarr, k) {
 // isIsogram "aba" = false
 
 function isIsogram(str){
-  str = str.toLowerCase()
+  // str = str.toLowerCase()
 
-  const charSet = new Set()
+  // const charSet = new Set()
 
-  for (let char of str){
-    if (charSet.has(char)){
-      return false
-    }
-    charSet.add(char)
-  }
+  // for (let char of str){
+  //   if (charSet.has(char)){
+  //     return false
+  //   }
+  //   charSet.add(char)
+  // }
 
-  return true
+  // return true
+
+  return new Set(str.toLowerCase()).size == str.length
 }
