@@ -2248,5 +2248,7 @@ function isIsogram(str){
 // * "1234!_ "     -> "11223344!!__  "
 
 function doubleChar(str) {
-  // Your code here
+  return str.split('').map((char) => (char + char)).join('')
 }
+
+console.log(doubleChar("String"));
