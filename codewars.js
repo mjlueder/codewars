@@ -2249,6 +2249,9 @@ function isIsogram(str){
 
 function doubleChar(str) {
   return str.split('').map((char) => (char + char)).join('')
+
+  // Regex Alt:
+  // return str.replace(/(.)/g, "$1$1")
 }
 
 console.log(doubleChar("String"));
