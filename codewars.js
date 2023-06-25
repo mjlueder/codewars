@@ -2283,7 +2283,29 @@ function Fighter(name, health, damagePerAttack) {
 }
 
 function declareWinner(fighter1, fighter2, firstAttacker) {
+  let currentAttacker 
 
+  if (firstAttacker === fighter1.name) {
+    currentAttacker = 1
+  } else if (firstAttacker === fighter2.name) {
+    currentAttacker = -1
+  }
+
+  while (fighter1.health > 0 && fighter2.health > 0) {
+    if (currentAttacker === 1) {
+      fighter2.health = fighter2.health - fighter1.damagePerAttack
+      currentAttacker *= -1
+    } else if (currentAttacker === -1) {
+      fighter1.health = fighter1.health - fighter2.damagePerAttack
+      currentAttacker *= -1
+    }
+  }
+
+  if (currentAttacker === -1){
+    return fighter1.name
+  } else if (currentAttacker === 1){
+    return fighter2.name
+  }
 }
 
 console.log(declareWinner(new Fighter("Harold", 20, 5), new Fighter("Harry", 5, 4), "Harry"));
