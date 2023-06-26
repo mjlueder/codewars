@@ -2316,5 +2316,13 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
 // Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
 
 var capitals = function (word) {
-	// Write your code here
+  let caps = []
+	word.split('').forEach((char, idx) => {
+    if (char === char.toUpperCase()){
+      caps.push(idx)
+    }
+  })
+  return caps
 };
+
+console.log(capitals('CodEWaRs'));
