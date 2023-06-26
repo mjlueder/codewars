@@ -2308,4 +2308,13 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
   }
 }
 
-console.log(declareWinner(new Fighter("Harold", 20, 5), new Fighter("Harry", 5, 4), "Harry"));
+// console.log(declareWinner(new Fighter("Harold", 20, 5), new Fighter("Harry", 5, 4), "Harry"));
+
+// Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
+
+// Example
+// Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
+
+var capitals = function (word) {
+	// Write your code here
+};
