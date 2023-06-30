@@ -2360,5 +2360,8 @@ function DNAtoRNA(dna) {
 // printer_error(s) => "8/22"
 
 function printerError(s) {
-  // your code
+  let errorCount = (s.match(/[^a-m]/g) || []).length
+  return errorCount + '/' + s.length
 }
+
+// console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));
