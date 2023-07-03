@@ -2376,5 +2376,13 @@ function printerError(s) {
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 function arrayDiff(a, b) {
-  
+  let results = []
+  a.forEach(value => {
+    if (!b.some(el => (el === value))) {
+      results.push(value)
+    }
+  })
+  return results
 }
+
+console.log(arrayDiff([1, 2], [1]));
