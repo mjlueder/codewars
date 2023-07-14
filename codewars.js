@@ -2396,5 +2396,5 @@ function arrayDiff(a, b) {
 // All values will be positive integers or floats, or zero.
 
 function plural(n) {
-  return (n === 1) ? false : true 
+  return n !== 1
 }
