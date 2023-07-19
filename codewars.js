@@ -2398,3 +2398,9 @@ function arrayDiff(a, b) {
 function plural(n) {
   return n !== 1
 }
+
+// write a function that returns 5 without using the characters 0123456789*+-/
+
+function returnsFive() {
+
+}
