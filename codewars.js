@@ -2402,5 +2402,5 @@ function plural(n) {
 // write a function that returns 5 without using the characters 0123456789*+-/
 
 function returnsFive() {
-
+  return ['a', 'b', 'c', 'd', 'e'].length
 }
