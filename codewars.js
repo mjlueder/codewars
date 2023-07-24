@@ -2432,5 +2432,24 @@ function greet(name){
 // Your function will return the index 3, because at the 3rd position of the array, the sum of left side of the index ({1,2,3}) and the sum of the right side of the index ({3,2,1}) both equal 6.
 
 function findEvenIndex(arr){
-  //Code goes here!
+  if (arr.length === 0 || arr.length === 1) {
+    return -1
+  }
+  if(arr.slice(1, arr.length).reduce((prev, num) => (prev+num)) === 0) {
+    return 0
+  }
+  if(arr.slice(0, arr.length - 1).reduce((prev, num) => (prev+num)) === 0) {
+    return arr.length - 1
+  }
+  let front, back
+  for (let i = 1; i < arr.length - 1; i++) {
+    front = arr.slice(0, i).reduce((prev, num) => (prev+num));
+    back = arr.slice(i+1, arr.length).reduce((prev, num) => (prev+num));
+    if (front === back) {
+      return i
+    }
+  }
+  return -1
 }
+
+console.log(findEvenIndex([1]));
