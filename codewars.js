@@ -2464,7 +2464,20 @@ function findEvenIndex(arr){
 // Since we cannot define keywords in Javascript (well, at least I don't know how to do it), your task is to define a function xor(a, b) where a and b are the two expressions to be evaluated. Your xor function should have the behaviour described above, returning true if exactly one of the two expressions evaluate to true, false otherwise.
 
 function xor(a, b) {
-  return (a && !b || b && !a)
+  return a != b
 }
 
 // console.log(xor(false, 0));
+
+// Write a function that returns both the minimum and maximum number of the given list/array.
+
+// Examples (Input --> Output)
+// [1,2,3,4,5] --> [1,5]
+// [2334454,5] --> [5,2334454]
+// [1]         --> [1,1]
+
+function minMax(arr){
+
+}
+
+console.log(minMax([0, 1, 5, 2, 4]));
