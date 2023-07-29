@@ -2479,6 +2479,9 @@ function xor(a, b) {
 function minMax(arr){
   arr = arr.sort((a,b) => (a - b))
   return [arr[0],arr[arr.length - 1]]
+
+  // Alt:
+  // return [Math.min(...arr),Math.max(...arr)]
 }
 
 console.log(minMax([0, 1, 5, 2, 4]));
