@@ -2484,4 +2484,16 @@ function minMax(arr){
   // return [Math.min(...arr),Math.max(...arr)]
 }
 
-console.log(minMax([0, 1, 5, 2, 4]));
+// console.log(minMax([0, 1, 5, 2, 4]));
+
+// Write a function which takes a number and returns the corresponding ASCII char for that value.
+
+// Example:
+
+// 65 --> 'A'
+// 97 --> 'a'
+// 48 --> '0
+
+function getChar(c){
+  return String.fromCharCode(c)
+}
