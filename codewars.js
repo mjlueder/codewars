@@ -2507,5 +2507,23 @@ function getChar(c){
 // 4 --> 0 (because 4 is already a one-digit number)
 
 function persistence(num) {
-  //code me
+  if (num < 10) return 0
+  
+  let count = 0
+  while (num > 9) {
+    num = num.toString().split('').map(char => parseInt(char)).reduce((prev, num) => (prev*num))
+    count++
+  }
+
+  return count
 }
+
+// console.log(persistence(999));
+
+// Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
+
+function solution(nums){
+
+}
+
+console.log(solution([1, 2, 10, 50, 5]));
