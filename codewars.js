@@ -2548,6 +2548,23 @@ function solution(nums){
 // ...which would appear as a string of " *\n***\n *\n"
 
 function diamond(n){
-  return '';
+  if (!(n%2) || n <= 0) return null
+
+  let di = ['*'.repeat(n) + '\n']
+  // console.log(di);
+
+  let space = 1
+
+  for (i = n - 2; i >= 1; i -= 2) {
+    // console.log(' '.repeat(space) + '*'.repeat(i) + '\n');
+    di.push(' '.repeat(space) + '*'.repeat(i) + '\n')
+    di.unshift(' '.repeat(space) + '*'.repeat(i) + '\n')
+    // console.log('DI ' + di);
+    space++
+  }
+  return di.join('')
 }
 
+console.log(diamond(5));
+// console.log("  *\n ***\n*****\n ***\n  *\n");
+// console.log('*'.repeat(2));
