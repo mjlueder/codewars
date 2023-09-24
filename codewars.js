@@ -2576,7 +2576,7 @@ function diamond(n){
 // 5, "Hello" -> "HelloHelloHelloHelloHello"
 
 function repeatStr (n, s) {
-  
+  return s.repeat(n);
 }
 
-console.log();
+console.log(repeatStr(3, "tlou is the best *"));
