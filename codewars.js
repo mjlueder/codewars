@@ -2620,5 +2620,18 @@ function accum(s) {
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
 function gimme (triplet) {
-
+  let zero = triplet[0]
+  let one = triplet[1]
+  let two = triplet[2]
+  if (((zero > one) && (zero < two)) || ((zero < one) && (zero > two))) {
+    return 0
+  }
+  else if (((one > zero) && (one < two)) || ((one < zero) && (one > two))) {
+    return 1
+  }
+  else if (((two > one) && (two < zero)) || ((two < one) && (two > zero))) {
+    return 2
+  }
 }
+
+console.log(gimme([4, 1, 2]));
