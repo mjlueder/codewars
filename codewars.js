@@ -2675,5 +2675,20 @@ function gimme (triplet) {
 
 
 function dirReduc(arr){
-  // ...
+  let count = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    if ((arr[i] === "NORTH" && arr[i + 1] === "SOUTH") || 
+        (arr[i] === "SOUTH" && arr[i + 1] === "NORTH") ||   
+        (arr[i] === "EAST" && arr[i + 1] === "WEST") || 
+        (arr[i] === "WEST" && arr[i + 1] === "EAST") ) {
+      arr.splice(i, 2)
+      count++
+      i--
+    }
+  }
+
+  return count === 0 ? arr : dirReduc(arr)
 }
+
+console.log(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]));
