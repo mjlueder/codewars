@@ -2728,5 +2728,8 @@ function binToDec(bin) {
 // -32 --> 5
 
 function sumDigits(number) {
-
+  if (number < 0) number = number * -1
+  return number.toString().split('').map(num => (parseInt(num))).reduce((prev, num) => (prev + num))
 }
+
+console.log(sumDigits(-32));
