@@ -2731,4 +2731,21 @@ function sumDigits(number) {
   return Math.abs(number).toString().split('').map(num => (parseInt(num))).reduce((prev, num) => (prev + num))
 }
 
-console.log(sumDigits(-32));
+// console.log(sumDigits(-32));
+
+// umbers ending with zeros are boring.
+
+// They might be fun in your world, but not here.
+
+// Get rid of them. Only the ending ones.
+
+// 1450 -> 145
+// 960000 -> 96
+// 1050 -> 105
+// -1050 -> -105
+
+function noBoringZeros(n) {
+
+}
+
+console.log(noBoringZeros(105000));
