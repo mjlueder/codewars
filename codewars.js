@@ -2745,7 +2745,15 @@ function sumDigits(number) {
 // -1050 -> -105
 
 function noBoringZeros(n) {
-
+  if (n === 0) return 0
+  n = n.toString().split('')
+  for (let i = n.length - 1; i >= 0; i--) {
+    if (n[i] === '0') {
+      n.pop(i)
+    } else {
+      return parseInt(n.join(''))
+    }
+  }
 }
 
 console.log(noBoringZeros(105000));
