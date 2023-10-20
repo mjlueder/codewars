@@ -2778,10 +2778,22 @@ function noBoringZeros(n) {
 // Division should be integer division. For example, this should return 2, not 2.666666...:
 // eight(dividedBy(three()));
 
+
+// https://www.codewars.com/kata/525f3eda17c7cd9f9e000b39/train/javascript
+
 function zero() {}
-function one() {}
-function two() {}
-function three() {}
+function one(num) {
+  if (!num) return 1
+  return num + 1
+}
+function two(num) {
+  if (!num) return 2
+  return eval(num + 2)
+}
+function three(num) {
+  if (!num) return 3
+  return eval(num + 3)
+}
 function four() {}
 function five() {}
 function six() {}
@@ -2789,7 +2801,27 @@ function seven() {}
 function eight() {}
 function nine() {}
 
-function plus() {}
-function minus() {}
-function times() {}
-function dividedBy() {}
+function plus(int) { return int + ' + ' }
+function minus(int) { return int + ' - ' }
+function times(int) { return int + ' * ' }
+function dividedBy(int) { return int + ' / ' }
+
+// console.log(one());
+// console.log(three(dividedBy(two())));
+// console.log(two(plus(one())));
+
+// Can you find the needle in the haystack?
+
+// Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+// After your function finds the needle it should return a message (as a string) that says:
+
+// "found the needle at position " plus the index it found the needle, so:
+
+// Example(Input --> Output)
+
+// ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5" 
+
+function findNeedle(haystack) {
+  // your code here
+}
