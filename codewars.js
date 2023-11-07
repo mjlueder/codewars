@@ -2862,4 +2862,12 @@ let summation = function (num) {
   return sum
 }
 
-console.log(summation(4));
+// console.log(summation(4));
+
+// This function should test if the factor is a factor of base.
+// Return true if it is a factor or false if it is not.
+
+function checkForFactor (base, factor) {
+  // code here
+}
+
