@@ -2868,6 +2868,7 @@ let summation = function (num) {
 // Return true if it is a factor or false if it is not.
 
 function checkForFactor (base, factor) {
-  // code here
+  return !(base % factor)
 }
 
+console.log(checkForFactor(6,2));
