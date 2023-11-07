@@ -2882,5 +2882,5 @@ function checkForFactor (base, factor) {
 // "Hi There." --> "There. Hi"
 
 function reverse(string){
-  //your code here
+  return string.split(' ').reverse().join(' ')
 }
