@@ -2890,3 +2890,9 @@ function reverse(string){
 function simpleMultiplication(number) {
   return number % 2 ? number * 9 : number * 8
 }
+
+// Complete the function which converts hex number (given as a string) to a decimal number.
+
+function hexToDec(hexString){
+  //your code here
+}
